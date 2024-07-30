@@ -1,0 +1,22 @@
+The Facade pattern provides a simplified interface to a complex subsystem.
+It makes a complex system easier to use by providing a unified interface.
+
+Example Scenario
+Let's assume we have a home theater system with
+several components: DVD Player, Projector, and Surround Sound System.
+Instead of interacting with each component directly, we use a Facade to simplify the operation.
+
+
+#--------Advantage of Facade Pattern--------#
+Complex Subsystems: When you have a system with multiple interdependent classes,
+using a Facade simplifies interactions with the system. For example,
+a home theater system with components like DVD players, projectors, and sound systems.
+
+Library or Framework Integration: When integrating a complex library or framework into your application,
+ a Facade can provide a simpler interface for your specific use cases,
+ hiding the complexity of the underlying library.
+
+Simplified Client Code: The client code is cleaner and easier to understand.
+
+Reduced Dependency: The client does not need to know about the interactions
+between the DVD player, projector, and sound system.

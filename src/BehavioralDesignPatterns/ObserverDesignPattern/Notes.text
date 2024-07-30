@@ -1,0 +1,24 @@
+The Observer pattern defines a one-to-many relationship between objects
+so that when one object changes state, all its dependents are notified and updated automatically.
+
+Example Scenario
+Let's consider a scenario where we have a WeatherStation that monitors temperature.
+Various display devices (like a phone display and a laptop display) need to be updated whenever the temperature changes.
+
+Subject
+First, we'll define an interface for the subject, which will manage the observers and
+notify them of any state changes:
+
+
+------Explanation-------
+Observable and Observer: We use the built-in java.util.Observable class for the subject and java.
+util.Observer interface for the observers.
+
+Concrete Observable: The WeatherStation class extends Observable and provides specific functionality for
+temperature changes. It calls setChanged() and notifyObservers() when the temperature changes.
+
+Concrete Observers: The PhoneDisplay and LaptopDisplay classes implement the Observer interface
+and update their display based on the temperature change.
+
+Client Code: The client code creates instances of WeatherStation, PhoneDisplay, and LaptopDisplay,
+adds the displays to the WeatherStation's list of observers, and changes the temperature, triggering notifications to the observers.

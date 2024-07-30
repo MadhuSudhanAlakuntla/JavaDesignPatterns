@@ -1,0 +1,18 @@
+The Prototype design pattern is a creational pattern that allows you to create duplicate objects
+while keeping performance in mind. It uses a prototype (a cloneable object) to create new instances.
+ pattern is useful when creating an object from scratch is costly, and you want to avoid the overhead by copying an existing object.
+
+Example2 Scenario
+Let's use a scenario where we need to clone different types of documents. We can have different types of
+documents like Report, Resume, and Letter. Each document type can be cloned from an existing prototype.
+
+Explanation
+Document Interface: This interface declares the clone method and the display method. The clone method is responsible for creating a copy of the document.
+
+Concrete Document Classes: These classes (Report, Resume, Letter) implement the Document interface. Each class has its own implementation of the clone method which creates a new instance with the same state as the original.
+
+Prototype Manager: The PrototypeManager class manages prototypes and allows cloning of registered prototypes. It maintains a map of prototypes and provides a method to clone them based on a key.
+
+Client Code: The client code (PrototypePatternTest) creates prototypes, registers them with the PrototypeManager, and then clones and displays them.
+
+This example demonstrates how the Prototype design pattern allows you to create new objects by copying an existing object. This approach is beneficial when creating a new object from scratch is expensive or complex.

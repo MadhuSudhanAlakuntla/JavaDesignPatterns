@@ -1,0 +1,26 @@
+The Proxy pattern provides a surrogate or placeholder for another object to control access to it.
+This pattern can be used for various purposes like lazy initialization, access control, logging, etc.
+
+Example Scenario
+Let's assume we have an Image interface and a concrete class RealImage that loads an image from the disk.
+We will create a ProxyImage class to control access to RealImage and add lazy initialization to it.
+
+________Explanation______
+Lazy Initialization: The ProxyImage class controls access to the RealImage object.
+The RealImage is only created when it is needed (when display() is called for the first time).
+
+Client Code: The client code interacts with the Image interface.
+It doesn't need to know whether it's dealing with a RealImage or a ProxyImage.
+
+Efficiency: The image is loaded from the disk only once. Subsequent calls to display()
+do not reload the image,demonstrating lazy initialization.
+
+_______Benefits of the Proxy Pattern______
+Controlled Access: The proxy can control access to the real object, providing additional
+functionality like lazy initialization, access control, logging, etc.
+
+Encapsulation: The real object is encapsulated, and clients interact with the
+proxy which can add additional behavior.
+
+Separation of Concerns: The proxy separates concerns, allowing the real object to focus
+ on its core functionality while the proxy handles additional concerns

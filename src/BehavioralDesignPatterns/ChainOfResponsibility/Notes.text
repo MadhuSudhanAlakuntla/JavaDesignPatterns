@@ -1,0 +1,27 @@
+The Chain of Responsibility pattern allows a request to pass through a chain of handlers.
+Each handler can either process the request or pass it to the next handler in the chain.
+
+Example Scenario
+Let's consider a scenario where different levels of employees in a company can approve
+a purchase request based on the amount. We have three levels: Manager, Director, and Vice President.
+Each level has a limit up to which they can approve the purchase. If they cannot approve it, they pass it to the next level.
+
+______Explanation_________
+Handlers in Chain: The client creates instances of Manager, Director, and VicePresident and
+sets up the chain of responsibility by linking them together using setNextApprover.
+
+Processing Requests: The client makes purchase requests through the manager object.
+Each request is passed along the chain until it is either handled or reaches the end of the chain.
+
+Flexible Handling: Each handler processes the request if it can. If not,
+it passes the request to the next handler in the chain.
+
+_________Benefits of the Chain of Responsibility Pattern__________
+Decoupling: The pattern decouples the sender of a request from its receiver,
+allowing multiple handlers to process the request.
+
+Flexible and Scalable: You can add or remove handlers from the chain easily without
+changing the client code.
+
+Responsibility Sharing: The pattern allows multiple objects to handle a request,
+sharing the responsibility among them.

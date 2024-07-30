@@ -1,0 +1,20 @@
+The Factory design pattern is one of the most commonly used creational patterns. It provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. The Factory pattern is useful when the exact type of objects to be created is determined during runtime.
+
+Example3 Scenario
+we'll create a system for generating different types of notifications (e.g., Email, SMS, and Push notifications).
+
+
+Explanation
+Notification Interface: This interface declares the send method that all concrete notification classes must implement.
+
+Concrete Notification Classes: These classes (EmailNotification, SMSNotification, PushNotification)
+implement the Notification interface and provide their specific implementation of the send method.
+
+Factory Class: The NotificationFactory class has a method getNotification which takes a string as a parameter.
+Based on the string value, it returns an instance of the corresponding notification. If the string doesn't match any known notification type, it returns null.
+
+Client Code: The client code (FactoryPatternTest) uses the NotificationFactory to create instances of different notifications based on the input string.
+ It then calls the send method on each notification object.
+
+This example demonstrates how the Factory design pattern allows you to create various types of objects
+without specifying the exact class of the object that will be created. This promotes flexibility and decoupling in your code.
